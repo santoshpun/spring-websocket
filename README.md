@@ -1,1 +1,1 @@
-# spring-websocket1
+# spring-websocket traditional websocket implementation
