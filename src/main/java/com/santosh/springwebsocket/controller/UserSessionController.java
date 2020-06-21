@@ -33,15 +33,9 @@ public class UserSessionController {
             @Override
             public void run() {
                 try {
-                    //log.info("New thread running " + new Date());
                     User user = UserStore.getInstance().getUser("santoshweb");
                     if (user != null) {
                         user.getWebSocketSession().sendMessage(new TextMessage("test " + new Date()));
-                    }
-
-                    User user2 = UserStore.getInstance().getUser("subashweb");
-                    if (user2 != null) {
-                        user2.getWebSocketSession().sendMessage(new TextMessage("test " + new Date()));
                     }
                 } catch (Exception e) {
                     log.error("Exception ", e);
